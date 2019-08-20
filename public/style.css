@@ -1,0 +1,60 @@
+body,
+input,
+button,
+textarea,
+select,
+option {
+  font: normal 1em Roboto, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+pre,
+dl,
+dd,
+blockquote,
+button,
+input {
+  margin: 0;
+}
+input,
+legend,
+input,
+textarea,
+button {
+  padding: 0;
+}
+form,
+fieldset,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+*{margin:0;padding:0;}
+ol.reset,
+ul.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* home */
+
+.container{
+    padding:20px 16px;
+}
