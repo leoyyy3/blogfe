@@ -1,14 +1,11 @@
 import request from 'axios'
+const config = require('../util/config')
+request.defaults.baseURL = config.baseUrl
 
-// request.defaults.baseURL = 'https://gxx.leanapp.cn/'
-// request.defaults.baseURL = 'http://localhost:8090'
-request.defaults.baseURL = 'http://144.34.136.236:3000'
-
-export const setCategory = ({ commit, state },params) => {
-    console.log('params')
-  return request.post('/article/get').then((response) => {
+export const getList = ({ commit, state },params) => {
+  return request.post('/article/get',params).then((response) => {
     if (response.data.code === 0) {
-        commit('SET_CATEGORY', {category:response.data.results})
+        commit('GET_LIST', {data:response.data.results})
     }
   }).catch((error) => {
     console.log(error)
@@ -17,9 +14,18 @@ export const setCategory = ({ commit, state },params) => {
 
 export const getArticle = ({ commit, state },params) => {
     return request.post('/article/get',params).then((response) => {
-        // console.log('res',response.data)
       if (response.data.code === 0) {
-          commit('GET_ARTICLE', {article:response.data.results})
+          commit('GET_ARTICLE', {data:response.data.results})
+      }
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
+  export const getTopic = ({ commit, state }) => {
+    return request.post('/article/getTopic').then((response) => {
+      if (response.data.code === 0) {
+          commit('GET_TOPIC', {data:response.data.results})
       }
     }).catch((error) => {
       console.log(error)

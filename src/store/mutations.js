@@ -1,10 +1,11 @@
 export default{
-    SET_CATEGORY: (state, {category}) => {
-        // console.log('-------',category)
-      state.category = category
+    GET_LIST: (state, {data}) => {
+      state.list = data
     },
-    GET_ARTICLE: (state, {article}) => {
-        console.log('-------article',article)
-      state.article = article[0]
+    GET_ARTICLE: (state, {data}) => {
+      state.article = data
+    },
+    GET_TOPIC: (state, {data}) => {
+      state.topicList = data
     }
 }

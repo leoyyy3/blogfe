@@ -22,8 +22,11 @@ export default {
         //     article: 'article'
         // }),
         ...mapGetters({
-            article: 'gArticle'
+            article: 'article'
         })
+    },
+    metaInfo: {
+        title: this.article.title || ""
     },
     data(){
         return{

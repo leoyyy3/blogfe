@@ -1,2 +1,3 @@
-export const getCategory = state => state.category
-export const gArticle = state => state.article
+export const article = state => state.article[0]
+export const articleList = state => state.list
+export const topicList = state => state.topicList

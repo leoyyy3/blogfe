@@ -7,8 +7,9 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-  category: [],
+  list: [],
   article:[],
+  topicList: []
 }
 export function createStore () {
   return new Vuex.Store({

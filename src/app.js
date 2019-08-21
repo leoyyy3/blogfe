@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import MetaInfo from 'vue-meta-info'
 import { createStore } from './store'
 import { createRouter } from './router'
 import { sync } from 'vuex-router-sync'
@@ -8,6 +9,8 @@ import * as filters from './util/filters'
 
 // mixin for handling title
 Vue.mixin(titleMixin)
+
+Vue.use(MetaInfo)
 
 // register global utility filters.
 Object.keys(filters).forEach(key => {
